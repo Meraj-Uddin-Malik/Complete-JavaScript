@@ -1,5 +1,5 @@
 console.log(
-  `A for...in loop in JavaScript is used to iterate over the enumerable properties (keys) of an object.`
+  `A for...in loop in JavaScript is used to iterate over the enumerable properties (keys) of an object. \n`
 );
 
 // Syntax Example:
@@ -13,9 +13,20 @@ for (let key in person) {
 }
 // The loop iterates over each property in the `person` object, allowing you to access both the keys and their corresponding values.
 
-console.log("Practice Questions for For...In Loops");
+console.log("Practice Questions for For...In Loops \n");
+
 // 1. Create an object representing a car with properties like make, model, and year. Use a for...in loop to print each property and its value.
 // Hint: Define an object with at least three properties and iterate through it.
+
+let car = {
+  make: "Toyota",
+  model: "Corolla",
+  year: 2020
+};
+for (let key in car) {
+  console.log(key + ": " + car[key]); // Outputs each property and its value
+}
+
 
 // 2. Write a for...in loop to count the number of properties in an object.
 // Hint: Initialize a counter variable and increment it for each property in the object.
