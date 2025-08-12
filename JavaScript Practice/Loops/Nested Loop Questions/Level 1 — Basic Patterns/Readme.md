@@ -1,20 +1,27 @@
 # ⭐ Square Pattern Program (JavaScript)
 
-This program prints a simple **square pattern** made of stars (`*`) to the console.
-Example output for `n = 4`:
+Prints a **square pattern** of stars (`*`) in the console.
+
+**Example output for `n = 4`:**
+```
+* * * * 
+* * * * 
+* * * * 
+* * * * 
+```
 
 ## 🔧 How it works
 
-- We choose the **size** of the square using the variable `n`.
-- We use two `for` loops:
-  - The **outer loop** runs `n` times to print each row.
-  - The **inner loop** adds `n` stars (`*`) into each row.
-- Each completed row is printed using `console.log()`.
+- Set the **size** of the square with variable `n`.
+- Use two `for` loops:
+  - **Outer loop:** runs `n` times (for each row).
+  - **Inner loop:** adds `n` stars to each row.
+- Print each row with `console.log()`.
 
 ## 📜 JavaScript Code
 
 ```js
-console.log("Print a square of size n \n");
+console.log("Print a square of size n\n");
 
 let n = 4;
 for (let i = 1; i <= n; i++) {
@@ -25,67 +32,82 @@ for (let i = 1; i <= n; i++) {
   console.log(row);
 }
 ```
-1. Save the file as squarePattern.js.
-2. Open your terminal.
-3. Run the command: node squarePattern.js
 
+**How to run:**
+1. Save as `squarePattern.js`.
+2. Open your terminal.
+3. Run: `node squarePattern.js`
 
 
 # 🔺 Right-Angled Triangle Pattern (JavaScript)
 
-This program prints a **right-angled triangle** made of stars (`*`) in the console.
-Example output for `n = 4`:
+Prints a **right-angled triangle** of stars (`*`) in the console.
+
+**Example output for `n = 5`:**
+```
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+```
 
 ## 🧠 How it works
 
-- The variable `n` decides how **tall** the triangle will be.
-- We use two `for` loops:
-  - The **outer loop** counts the rows (from 1 to `n`).
-  - The **inner loop** prints stars:  
-    the number of stars in each row = the row number.
-- Each row gets printed using `console.log()`.
-
+- `n` sets the **height** of the triangle.
+- Two `for` loops:
+  - **Outer loop:** rows from 1 to `n`.
+  - **Inner loop:** prints as many stars as the row number.
+- Print each row with `console.log()`.
 
 ## 💻 JavaScript Code
 
 ```js
-console.log("\n Print a right-angled triangle \n");
+console.log("\nPrint a right-angled triangle\n");
 
 let n = 5;
 
-for(let a = 1; a <= n; a++){
-    let row1 = "";
-    for(let b = 1; b <= a; b++){
-        row1 += "* ";
-    }
-    console.log(row1);
+for (let a = 1; a <= n; a++) {
+  let row1 = "";
+  for (let b = 1; b <= a; b++) {
+    row1 += "* ";
+  }
+  console.log(row1);
 }
 ```
 
-1. Save the file as rightAnglePattern.js.
+**How to run:**
+1. Save as `rightAnglePattern.js`.
 2. Open your terminal.
-3. Run the command: node rightAnglePattern.js
+3. Run: `node rightAnglePattern.js`
 
 
-# 🔻 Reverse (Inverted) Triangle Pattern — JavaScript
+# 🔻 Reverse (Inverted) Triangle Pattern (JavaScript)
 
-This program prints a **reverse right-angled triangle** made of stars (`*`) in the console.
-Example output for `n = 4`:
+Prints a **reverse right-angled triangle** of stars (`*`) in the console.
+
+**Example output for `n = 4`:**
+```
+* * * * 
+* * * 
+* * 
+* 
+```
 
 ## 🧠 How it works
 
-- The variable `n` controls the **height** of the triangle.
-- We start from `n` stars and go *down to 1*.
-- Two `for` loops are used:
-  - The **outer loop** counts rows from `n` down to `1`.
-  - The **inner loop** adds stars (`*`) to the current row.
-- Each finished row is printed with `console.log()`.
+- `n` sets the **height** of the triangle.
+- Two `for` loops:
+  - **Outer loop:** rows from `n` down to 1.
+  - **Inner loop:** prints as many stars as the current row number.
+- Print each row with `console.log()`.
 
 ## 💻 JavaScript Code
 
 ```js
-console.log("\n Print reverse triangle \n");
+console.log("\nPrint reverse triangle\n");
 
+let n = 4;
 for (let a = n; a >= 1; a--) {
   let row2 = "";
   for (let b = 1; b <= a; b++) {
@@ -94,7 +116,8 @@ for (let a = n; a >= 1; a--) {
   console.log(row2);
 }
 ```
-1. Save the file as reverseTrianglePattern.js.
-2. Open your terminal.
-3. Run the command: node reverseTrianglePattern.js
 
+**How to run:**
+1. Save as `reverseTrianglePattern.js`.
+2. Open your terminal.
+3. Run: `node reverseTrianglePattern.js`

@@ -1,10 +1,23 @@
+console.log(`Primitive data types in JavaScript are basic types that are not objects and have no methods. They include:
+- Number
+- String
+- Boolean
+- Undefined
+- Null
+- Symbol
+- BigInt 
+These types are immutable, meaning their values cannot be changed after creation. Here are some examples of primitive data types in JavaScript: \n`);
+
+console.log(
+  "Objects in JavaScript are collections of key-value pairs and can store multiple values and complex data. Objects can also have methods (functions as properties) They are mutable, meaning you can change their properties and values after creation. Here are some examples of objects in JavaScript:"
+);
+
 console.log("Practice Questions on JavaScript Data Types \n");
 // 1. What will be the output of the following code?
 // let x = "5" + 2 + 3;
 // Hint: Think about how JavaScript handles string concatenation and type coercion.
 let x = "5" + 2 + 3;
 console.log(x); // Output: "523"
-
 
 // 2. How can you check the type of a variable in JavaScript?
 // Hint: There is a built-in operator for this.
@@ -29,7 +42,7 @@ console.log(typeof NaN); // Output: "number"
 
 // 6. How do you create a Symbol in JavaScript?
 // Hint: Use the Symbol() function.
-let mySymbol = Symbol('description');
+let mySymbol = Symbol("description");
 console.log(mySymbol); // Output: Symbol(description)
 
 // 7. What is the result of:
@@ -40,7 +53,7 @@ let obj = {};
 console.log(typeof obj); // Output: "object"
 
 // 8. How can you check if a variable is an array?
-// Hint: There is a built-in method in Array.   
+// Hint: There is a built-in method in Array.
 let arr = [1, 2, 3];
 console.log(Array.isArray(arr)); // Output: true
 
@@ -54,22 +67,8 @@ console.log(a === undefined); // Output: true
 // 10. How do you convert a string to a number in JavaScript?
 // Hint: Try using Number(), parseInt(), or the unary plus (+) operator.
 let strNumber = "123";
-let convertedNumber  = parseInt(strNumber); // or Number(strNumber) or +strNumber
+let convertedNumber = parseInt(strNumber); // or Number(strNumber) or +strNumber
 console.log(convertedNumber); // Output: 123
 
-let convertedNumber1 = Number(strNumber); // or parseInt(strNumber) or +strNumber    
+let convertedNumber1 = Number(strNumber); // or parseInt(strNumber) or +strNumber
 console.log(convertedNumber1); // Output: 123
-
-
-/*
-Primitive data types in JavaScript are basic types that are not objects and have no methods. They include:
-- Number
-- String
-- Boolean
-- Undefined
-- Null
-- Symbol
-- BigInt
-
-Objects in JavaScript are collections of key-value pairs and can store multiple values and complex data. Objects can also have methods (functions as properties).
-*/
