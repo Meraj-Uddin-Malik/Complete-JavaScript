@@ -5,7 +5,7 @@ let n = 5;
 for (let i = 1; i <= n; i++) {
   let row = "";
   for (let j = 1; j <= n; j++) {
-    // Print "*" when i == j (main diagonal)
+    // Print "*" when i  == j (main diagonal)
     // OR when i + j == n + 1 (secondary diagonal)
     if (i == j || i + j == n + 1) {
       row += "*";
@@ -26,11 +26,10 @@ let cols = 4;
 for (let i = 1; i <= rows; i++) {
   let row = "";
   for (let j = 1; j <= cols; j++) {
-    // If row is even → start with a space before '#'
-    if (i % 2 == 0) {
-      row += " #";
+    if ((i + j) % 2 === 0) {
+      row += "#";
     } else {
-      row += "# ";
+      row += " ";
     }
   }
   console.log(row);

@@ -1,8 +1,3 @@
-
-
-
-// #5
-
 console.log("\n Repeat Number Triangle \n");
 
 let n = 4;

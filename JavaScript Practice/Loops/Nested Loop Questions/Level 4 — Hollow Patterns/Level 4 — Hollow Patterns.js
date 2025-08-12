@@ -1,25 +1,23 @@
-// #8
-
 console.log("Hollow square of stars: \n");
 
-// let n = 5;
+let n = 5;
 
-// for (let i = 1; i <= n; i++) {
-//   let row = "";
-//   for (let j = 1; j <= n; j++) {
-//     if (i == 1 || i == n || j == 1 || j == n) {
-//       row += "*";
-//     } else {
-//       row += " ";
-//     }
-//   }
-//   console.log(row);
-// }
+// Hollow Square
+for (let i = 1; i <= n; i++) {
+  let row = "";
+  for (let j = 1; j <= n; j++) {
+    if (i == 1 || i == n || j == 1 || j == n) {
+      row += "*";
+    } else {
+      row += " ";
+    }
+  }
+  console.log(row);
+}
 
-console.log("Hollow Pyramid Pattern\n");
+console.log("\nHollow Pyramid Pattern\n");
 
-let n = 5; // number of rows
-
+// Hollow Pyramid
 for (let i = 1; i <= n; i++) {
   let row = "";
 
