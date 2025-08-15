@@ -79,15 +79,14 @@ for (let i = 0; i < Math.floor(fruits.length / 2); i++) {
 console.log("Array after reversing:", fruits);
 
 // 9. Find the largest string (by length) in the array. 
-//     Hint: Compare lengths in a loop.
-
-// let largestString = "";
-// for (let i = 0; i < fruits.length; i++) {
-//   if (fruits[i].length > largestString.length) {
-//     largestString = fruits[i];
-//   }
-// }
-// console.log("Largest string in the array:", largestString);
+//     Hint: Compare lengths in a loop. 
+let largestString = "";
+for (let i = 0; i < fruits.length; i++) {
+  if (fruits[i].length > largestString.length) {
+    largestString = fruits[i];
+  }
+}
+console.log("Largest string in the array:", largestString);
 
 // 10. Copy all elements from 'fruits' to a new array without using slice() or spread syntax.
 //      Hint: Use a loop to assign each element.
