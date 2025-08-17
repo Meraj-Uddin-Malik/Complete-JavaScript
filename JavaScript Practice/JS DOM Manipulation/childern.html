@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessing Children of an Element</title>
+  </head>
+  <body>
+    <div id="parent">
+      <p>First child</p>
+      <span>Second child</span>
+      <a href="#">Third child</a>
+
+    </div>
+
+    <script>
+alert("hello")
+// Accessing children and siblings of #parent
+    const parent = document.getElementById('parent');
+    console.log(parent.firstChild); // First child node (could be text)
+    console.log(parent.lastChild); // Last child node (could be text)
+    console.log(parent.childNodes); // All child nodes (includes text nodes)
+    console.log(parent.children); // All child elements (HTMLCollection)
+    console.log(parent.firstElementChild); // First child element (<p>)
+    console.log(parent.lastElementChild); // Last child element (<a>)
+    console.log(parent.childElementCount); // Number of child elements
+
+    // Accessing parent and siblings of #parent
+    console.log(parent.parentNode); // Parent node (<body>)
+    console.log(parent.parentElement); // Parent element (<body>)
+    console.log(parent.nextSibling); // Next sibling node (could be text or null)
+    console.log(parent.previousSibling); // Previous sibling node (could be text or null)
+    console.log(parent.nextElementSibling); // Next sibling element (null)
+    console.log(parent.previousElementSibling); // Previous sibling element (null)
+
+    // Accessing children and siblings of body
+    console.log(document.body.firstChild); // First child node
+    console.log(document.body.lastChild); // Last child node
+    console.log(document.body.childNodes); // All child nodes of the body
+    console.log(document.body.children); // All child elements of the body
+    console.log(document.body.firstElementChild); // First child element of the body
+    console.log(document.body.lastElementChild); // Last child element of the body
+    console.log(document.body.childElementCount); // Count of child elements in the body
+    console.log(document.body.parentNode); // Parent node of the body
+    // document.body.parentElement is always null, so it's not useful to log
+    // console.log(document.body.parentElement); // Parent element of the body
+    console.log(document.body.nextSibling); // Next sibling of the body
+    console.log(document.body.previousSibling); // Previous sibling of the body
+    // document.body.nextElementSibling is always null, so it's not useful to log
+    // console.log(document.body.nextElementSibling); // Next sibling element of the body
+    </script>
+  </body>
+</html>
