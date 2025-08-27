@@ -22,8 +22,8 @@ console.log("Practice Questions on JavaScript String Methods \n");
 
 // 1. Find the length of the string "JavaScript Practice".
 // Hint: Use the .length property.
-
-console.log(`The Length of singleQuoteString is : ${singleQuoteString.length}`)
+let stringLength = "JavaScript Practice";
+console.log(`The Length of string Is: ${stringLength.length}`);
 
 // 2. Get the character at index 5 in the string "JavaScript".
 // Hint: Use the .charAt() method.
@@ -105,4 +105,4 @@ console.log(`The startsWith Result Is : ${startString.startsWith("Hello")}`);
 // 15. Check if the string "Hello World" ends with "World".
 // Hint: Use the .endsWith() method.
 let endString = "Hello World";
-console.log(`The endsWith Result Is : ${endString.endsWith("World")}`);
+console.log(`The endsWith Result is: ${endString.endsWith("World")}`)
