@@ -3,7 +3,7 @@
 ---
 
 ### 1. What is a `for` loop in JavaScript?
-A `for` loop is a control structure that allows code to be executed repeatedly based on a condition.
+A `for` loop is a control structure for executing code repeatedly as long as a condition is true.
 
 ---
 
@@ -27,12 +27,12 @@ for (let i = 0; i < 5; i++) {
 ---
 
 ### 4. Can you omit any parts of the `for` loop?
-Yes, initialization, condition, and increment can be omitted, but semicolons are required.
+Yes, initialization, condition, and increment can be omitted, but semicolons must remain.
 
 ---
 
 ### 5. What happens if the condition is always true?
-The loop becomes infinite unless a `break` statement is used.
+The loop runs infinitely unless a `break` statement is used.
 
 ---
 
@@ -313,7 +313,3 @@ Compare characters from start and end.
 
 ### 50. How do you use `for` loop to generate multiplication tables?
 Nested loops for rows and columns.
-
----
-
-*Feel free to expand each answer with code examples as needed!*

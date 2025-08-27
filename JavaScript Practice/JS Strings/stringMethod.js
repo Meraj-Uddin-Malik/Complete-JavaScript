@@ -7,7 +7,7 @@ console.log(`
  - Strings can be manipulated using various built-in methods such as length, charAt, indexOf, slice, and more.
  - Common string operations include concatenation, searching, and replacing substrings.`);
 
-const singleQuoteString = "Hello, World!";
+const singleQuoteString = 'Hello, World!';
 const doubleQuoteString = "JavaScript Strings";
 const templateLiteral = `This is a template literal`;
 

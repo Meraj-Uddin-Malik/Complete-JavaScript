@@ -13,6 +13,7 @@ console.log(
 );
 
 console.log("Practice Questions on JavaScript Data Types \n");
+
 // 1. What will be the output of the following code?
 // let x = "5" + 2 + 3;
 // Hint: Think about how JavaScript handles string concatenation and type coercion.

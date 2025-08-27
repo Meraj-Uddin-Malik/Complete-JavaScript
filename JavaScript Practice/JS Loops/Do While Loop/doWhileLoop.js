@@ -41,5 +41,4 @@ console.log("Practice Questions for Do...While Loops");
 // Hint: Use a variable to build the reversed string character by character.
 
 // 10. Create a do...while loop that generates random numbers between 1 and 50 until a number greater than 40 is generated.
-// Hint: Use Math.random() to generate numbers and check if they are greater than 40
-
+// Hint: Use Math.random() to generate numbers and check if they are greater than 40.

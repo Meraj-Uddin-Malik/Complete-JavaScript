@@ -20,6 +20,7 @@ console.log("if-else statements are used to execute different blocks of code bas
 //     - Below 60: F
 //     Hint: Use multiple else if conditions.
 
+
 // 7. Check if a year is a leap year.
 //     Hint: Year is leap if divisible by 4, but not by 100 unless also divisible by 400.
 
