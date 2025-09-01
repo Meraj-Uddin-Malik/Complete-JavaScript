@@ -12,7 +12,7 @@ console.log(
   `const add = (a, b) => a + b; // This function takes two parameters and returns their sum`
 );
 
-// Practice Questions
+console.log(`Practice Questions`);
 
 // 1. Write a function to find the maximum of two numbers.
 

@@ -1,84 +1,30 @@
-console.log("Variable Questions in JavaScript \n ");
-// 1. Declare a variable named `age` and assign your age to it.
-//   Hint: Use the `let` or `const` keyword.
+console.log(
+  `A variable in JavaScript is a container for storing data values. 
+It allows you to store, modify, and retrieve information in your program.
 
-let age = 25; // Example age
-console.log(age); // Output: 25
+Variables are fundamental building blocks in JavaScript. 
+They allow you to store information that can be used and manipulated throughout your program. 
+Variables can hold different types of data, such as numbers, strings, booleans, objects, and more.
 
-// 2. Change the value of the `age` variable to a new number.
-//   Hint: Use the assignment operator `=`.
+JavaScript provides three ways to declare variables:
+1. var - function-scoped, can be redeclared and reassigned.
+2. let - block-scoped, can be reassigned but not redeclared in the same scope.
+3. const - block-scoped, cannot be reassigned or redeclared.
 
-age = 30; // Changing age
-console.log(age); // Output: 30
+Choosing the right type of variable declaration is important for maintaining code clarity and preventing bugs.
+Variables make your code dynamic and flexible, enabling you to perform calculations, 
+store user input, and manage application state.
+`
+);
 
-// 3. Declare a variable called `firstName` and assign your first name as a string.
-//   Hint: Strings are written inside quotes.
+var name = "John";
+let age = 23;
+const isStudent = true;
 
-let firstName = "Meraj Uddin Malik";
-console.log(firstName); // Output: Meraj Uddin Malik
+console.log(
+  `My name is ${name} and I am ${age} years old and I am ${
+    isStudent ? "a student" : "not a student"
+  }.`
+);
 
-// 4. Combine `firstName` and `age` into a new variable called `userInfo`.
-//   Hint: Use the `+` operator or template literals.
 
-let userInfo = firstName + " is " + age + " years old.";
-console.log(userInfo); // Output: Meraj Uddin Malik is 30 years old
-
-// 5. What is the difference between `let`, `const`, and `var`?
-//   Hint: Think about scope and reassignability.
-
-let variableLet = "I can be changed"; // Can be reassigned
-const variableConst = "I cannot be changed"; // Cannot be reassigned
-var variableVar = "I can also be changed"; // Can be reassigned, but has function scope
-console.log(variableLet, variableConst, variableVar); // Output: I can be changed I cannot be changed I can also be changed
-
-// 6. Declare a constant variable called `PI` and assign it the value 3.14.
-//   Hint: Use `const` for values that shouldn't change.
-
-const PI = 3.14;
-console.log(PI); // Output: 3.14
-
-// 7. Try to reassign the value of `PI`. What happens?
-//   Hint: Constants cannot be reassigned.
-
-try {
-    PI = 3.14159; // This will throw an error
-} catch (error) {
-    console.error("Error:", error.message); // Output: Error: Assignment to constant variable.
-}
-
-// 8. What will be the output of:
-//   ```
-//   var x = 5;
-//   let y = 10;
-//   const z = 15;
-//   x = x + y;
-//   y = y + z;
-//   z = z + x; // Will this work?
-//   ```
-//   Hint: Think about which variables can be reassigned.
-
-console.log(" \n Variable Reassignment Example:");
-var x = 5;
-let y = 10; 
-const z = 15;
-x = x + y; // x becomes 15  
-y = y + z; // y becomes 25
-try {
-    z = z + x; // This will throw an error because z is a constant
-} catch (error) {
-    console.error("Error:", error.message); // Output: Error: Assignment to constant variable.
-}
-
-// 9. Declare a variable without assigning a value. What is its value?
-//   Hint: Use `let` and check with `console.log`.
-
-let unassignedVariable;
-console.log(unassignedVariable); // Output: undefined
-
-// 10. What is hoisting? Which variables are hoisted?
-//    Hint: Try declaring and using variables before their declaration.
-
-console.log(" \n Hoisting Example:");
-console.log(hoistedVar); // Output: undefined (hoisted)
-var hoistedVar = "I am hoisted"; // This variable is hoisted
-console.log(hoistedVar); // Output: I am hoisted  

@@ -1,53 +1,77 @@
 console.log(
-  `A for loop is a control structure used to repeat a block of code a specific number of times. In JavaScript, it has three main parts: initialization, condition, and increment/decrement. The loop runs as long as the condition is true.`
+  `A for loop is a control structure used to repeat a block of code a specific number of times. 
+  In JavaScript, it has three main parts: initialization, condition, and increment/decrement. 
+  The loop runs as long as the condition is true.`
 );
 
 // Syntax Example:
-// for (let i = 0; i < 5; i++) {
-//   console.log(i); // Outputs numbers from 0 to 4
+for (let i = 0; i < 5; i++) {
+  console.log(i); // Outputs numbers from 0 to 4
+}
+
+// A1
+for (let i = 0; i < 11; i++) {
+  console.log(i);
+}
+
+console.log("\n");
+
+//  A2
+for (let i = 2; i <= 20; i += 2) {
+  console.log(i);
+}
+
+// A3
+for (let t = 1; t <= 10; t++) {
+  console.log(`5 x ${t} = ${5 * t}`);
+}
+
+// for (let u=1; u<=10; u++){
+//   console.log(`9 x ${u} = ${9*u}`);
 // }
-// The initialization (`let i = 0`) sets the starting point, the condition (`i < 5`) checks if the loop should continue, and the increment (`i++`) updates the loop variable after each iteration.
-// This loop will print the numbers 0 through 4 to the console.
 
+// A4
+let sum = 0;
+for (let sumNum = 1; sumNum <= 100; sumNum++) {
+  sum += sumNum;
+  console.log(`The Sum of 1 - 100 is ${sum}`);
+}
 
-console.log("Practice Questions for For Loops");
+// A5
+for (let revNum = 10; revNum >= 1; revNum--) {
+  console.log(revNum);
+}
 
-// 1. Print numbers from 1 to 10.
-// Hint: Start from 1, end at 10, increment by 1.
+// A6
+for (let sqrtNum = 1; sqrtNum <= 10; sqrtNum++) {
+  let squareRoot = Math.sqrt(sqrtNum);
+  console.log(`The square root of ${sqrtNum} is ${squareRoot}`);
+}
 
+// A7
 
-// 2. Print all even numbers between 1 and 20.
-// Hint: Use an if statement inside the loop to check if a number is even (number % 2 === 0).
+for (let i = 1; i <= 20; i += 2) {
+    console.log(i);
+}
 
+// A8
+let charStrings = "JavaScript";
+for (let i = 0; i < charStrings.length; i++) {
+  console.log(charStrings[i]);
+}
 
-// 3. Print the multiplication table of 5 (from 5 x 1 to 5 x 10).
-// Hint: Multiply 5 by the loop variable in each iteration.
+// A9
+let n = 5;   // you can change this value
+let factorial = 1;
 
+for (let i = 1; i <= n; i++) {
+    factorial *= i;   // factorial = factorial * i
+}
 
-// 4. Calculate the sum of numbers from 1 to 100.
-// Hint: Use a variable to keep track of the sum and add the loop variable in each iteration.
+console.log(`Factorial of ${n} is: ${factorial}`);
 
-
-// 5. Print all numbers from 10 down to 1 (reverse order).
-// Hint: Start from 10, decrement the loop variable.
-
-
-// 6. Print the squares of numbers from 1 to 10.
-// Hint: Use Math.pow(i, 2) or i * i inside the loop.
-
-
-// 7. Print all odd numbers between 1 and 20.
-// Hint: Check if the number is odd (number % 2 !== 0).
-
-
-// 8. Print each character of a string (e.g., "JavaScript") on a new line.
-// Hint: Use string.length as the loop condition and access each character with string[i].
-
-
-// 9. Print the factorial of a given number n (e.g., n = 5).
-// Hint: Multiply a result variable by the loop variable in each iteration.
-
-
-// 10. Print the elements of an array.
-// Hint: Use array.length as the loop condition and access each element with array[i].
-
+// A10
+let arrEle = ["apple", "banana", "cherry"];
+for (let i = 0; i < arrEle.length; i++) {
+    console.log(arrEle[i]);
+}
