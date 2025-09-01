@@ -10,7 +10,7 @@
 
 ## 6. Write a for...of loop to find the longest string in an array of strings.
 
-## 7. Create an array of mixed data types (e.g., numbers, strings, booleans). Use a for...of loop to print the type of each element.
+## 7. Create an array of mixed data types (e.g., numbers, strings, booleans). Use a for...of loop to print the type of each element. 
 
 ## 8. Write a function that takes an iterable (like a Set) and returns an array of its values using a for...of loop.
 
