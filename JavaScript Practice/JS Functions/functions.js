@@ -17,3 +17,31 @@ function add(a, b) {
   return a + b;
 }
 console.log(`Function Declaration Example: ${add(2, 3)}`); // Outputs: 5
+
+
+//* A1
+
+function addTwoNumbers (a , b) {
+  return a + b;
+}
+let result = addTwoNumbers(5, 4); 
+console.log(`The Sum Off Two Numbers Are: ${result}`);
+
+//* A2
+
+function isPalindrome(str) {
+    // convert to lowercase and remove spaces/punctuation
+    str = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+    
+    // reverse the string
+    let reversed = str.split("").reverse().join("");
+    
+    // check if original equals reversed
+    return str === reversed;
+}
+
+// Example usage:
+console.log(isPalindrome("madam"));       // true
+console.log(isPalindrome("racecar"));     // true
+console.log(isPalindrome("hello"));       // false
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
