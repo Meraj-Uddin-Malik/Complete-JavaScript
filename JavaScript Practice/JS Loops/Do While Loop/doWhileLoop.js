@@ -73,4 +73,12 @@ do {
   divisibleByThree++;
 } while (divisibleByThree <= 30);
 
-
+//* A9
+let factorialNum = 1;
+let num = 5;
+let u = 1;
+do {
+  console.log(`The Factorial Num Is ${factorialNum}`);
+  u *= num;
+  num++;
+} while (u <= num);
