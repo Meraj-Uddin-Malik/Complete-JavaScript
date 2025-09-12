@@ -20,7 +20,6 @@ console.log(`Function Declaration Example: ${add(2, 3)}`); // Outputs: 5
 
 
 //* A1
-
 function addTwoNumbers (a , b) {
   return a + b;
 }
@@ -28,7 +27,6 @@ let result = addTwoNumbers(5, 4);
 console.log(`The Sum Off Two Numbers Are: ${result}`);
 
 //* A2
-
 function isPalindrome(str) {
     // convert to lowercase and remove spaces/punctuation
     str = str.toLowerCase().replace(/[^a-z0-9]/g, "");
