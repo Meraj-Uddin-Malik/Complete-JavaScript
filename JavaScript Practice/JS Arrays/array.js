@@ -66,7 +66,6 @@ function reverseArray(arr) {
   let end = arr.length - 1;
 
   while (start < end) {
-    // swap arr[start] and arr[end]
     let temp = arr[start];
     arr[start] = arr[end];
     arr[end] = temp;
@@ -90,7 +89,6 @@ for (let fruit of fruits) {
 console.log("The largest fruit is: " + largestFruit);
 
 //* A10
-// 10. Copy all elements from `fruits` to a new array without using `.slice()` or the spread syntax.
 let newFruits = [];
 for (let fruit of fruits) {
   newFruits.push(fruit);
