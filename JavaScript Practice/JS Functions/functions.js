@@ -43,3 +43,17 @@ console.log(isPalindrome("madam"));       // true
 console.log(isPalindrome("racecar"));     // true
 console.log(isPalindrome("hello"));       // false
 console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
+
+//* A3
+let maximum = [3, 5, 1, 8, 2];
+
+function findMax(arr) {
+  let max = arr[0]; // Assume the first element is the largest
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i]; // Update max if current element is larger
+    }
+  }
+  return max;
+}
+console.log(`The Maximum Number Is: ${findMax(maximum)}`); // Outputs: 8
