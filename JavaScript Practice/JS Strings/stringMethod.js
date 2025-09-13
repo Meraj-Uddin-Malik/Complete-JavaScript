@@ -83,7 +83,7 @@ console.log(`The Check Result Is : ${checkString.includes("Script")}`);
 // Hint: Use the .repeat() method.
 
 let repeatString = "JS";
-console.log(`The Repeat Result Is : ${repeatString.repeat(13)}`);
+console.log(`The Repeat Result Is : ${repeatString.repeat(3)}`);
 
 // 12. Pad the string "5" to length 3 with "0" at the start.
 // Hint: Use the .padStart() method.
