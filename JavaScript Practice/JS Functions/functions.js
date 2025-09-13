@@ -57,3 +57,14 @@ function findMax(arr) {
   return max;
 }
 console.log(`The Maximum Number Is: ${findMax(maximum)}`); // Outputs: 8
+
+//* A4
+let reverseArray = [1, 2, 3, 4, 5];
+function reverseArr(arr) {
+  let reversed = []; // Create a new array to hold reversed elements
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reversed.push(arr[i]); // Add elements from the end to the new array
+  } 
+  return reversed;
+}
+console.log(`The Reverse Array Is: ${reverseArr(reverseArray)}`); // Outputs: [5, 4, 3, 2, 1]
