@@ -68,3 +68,13 @@ function reverseArr(arr) {
   return reversed;
 }
 console.log(`The Reverse Array Is: ${reverseArr(reverseArray)}`); // Outputs: [5, 4, 3, 2, 1]
+
+//* A5
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1; // Base case: factorial of 0 or 1 is 1
+  } else {
+    return n * factorial(n - 1); // Recursive case
+  } 
+}
+console.log(`The Factorial Is: ${factorial(5)}`); // Outputs: 120
