@@ -78,3 +78,48 @@ function factorial(n) {
   } 
 }
 console.log(`The Factorial Is: ${factorial(5)}`); // Outputs: 120
+
+//* A6  
+let tempCelsius = 25;
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9/5) + 32; // Convert Celsius to Fahrenheit
+}
+console.log(`The Temperature In Fahrenheit Is: ${celsiusToFahrenheit(tempCelsius)} C`); // Outputs: 77
+
+//* A7
+let vowelString = "Hello World";
+function countVowels(str) {
+  let count = 0;  
+  const vowels = "aeiouAEIOU"; // Define vowels (both lowercase and uppercase)
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      count++; // Increment count if character is a vowel
+    }
+  } 
+  return count;
+}
+console.log(`The Number Of Vowels In The String Is: ${countVowels(vowelString)}`); // Outputs: 3
+
+//* A8
+let primeNumber = 80;
+function isPrime(num) {
+  if (num <= 1) return false; // Numbers less than or equal to 1 are not prime  
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false; // Found a divisor, not prime
+    } 
+  }
+  return true; // No divisors found, it's prime
+} 
+console.log(`Is The Number Prime? : ${isPrime(primeNumber)}`); // Outputs: true
+
+//* A9
+let fibCount = 10;
+function fibonacci(n) {
+  let fibSeq = [0, 1]; // Starting values for Fibonacci sequence]
+  for (let i = 2; i < n; i++) {
+    fibSeq[i] = fibSeq[i - 1] + fibSeq[i - 2]; // Each number is the sum of the two preceding ones
+  }
+  return fibSeq.slice(0, n); // Return the sequence up to n elements
+}
+console.log(`The First ${fibCount} Fibonacci Numbers Are: ${fibonacci(fibCount)}`); // Outputs: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
