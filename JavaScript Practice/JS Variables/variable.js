@@ -3,12 +3,13 @@
 
 var x = 10;
 let j = 20;
-const l= 30;
+const l = 30;
 console.log(x, j, l);
 
 // ?Note: Always prefer let and const — var is outdated and risky due to hoisting issues.
 
 
+// *Practice Exercises:*
 // A1
 
 let age = 30;
