@@ -1,75 +1,63 @@
-console.log(`Primitive data types in JavaScript are basic types that are not objects and have no methods. They include:
-- Number
-- String
-- Boolean
-- Undefined
-- Null
-- Symbol
-- BigInt 
-These types are immutable, meaning their values cannot be changed after creation. Here are some examples of primitive data types in JavaScript: \n`);
+// Improved display of primitives vs objects with examples and output
+
+console.log("=== Primitive Data Types ===\n");
+
+// Primitive examples
+const num = 42;
+const str = "Hello";
+const bool = true;
+let undef; // undefined
+const nul = null; // typeof null is "object" (historical JS quirk)
+const sym = Symbol("id");
+const big = 9007199254740991n; // BigInt
+
+console.log(`Number : ${num} (typeof: ${typeof num})`);
+console.log(`String : "${str}" (typeof: ${typeof str})`);
+console.log(`Boolean: ${bool} (typeof: ${typeof bool})`);
+console.log(`Undefined: ${undef} (typeof: ${typeof undef})`);
+console.log(`Null: ${nul} (typeof: ${typeof nul})`);
+console.log(`Symbol: ${String(sym)} (typeof: ${typeof sym})`);
+console.log(`BigInt: ${big} (typeof: ${typeof big})\n`);
 
 console.log(
-  "Objects in JavaScript are collections of key-value pairs and can store multiple values and complex data. Objects can also have methods (functions as properties) They are mutable, meaning you can change their properties and values after creation. Here are some examples of objects in JavaScript:"
+  "Note: Primitive values are immutable — you cannot change the internal value of a primitive (you can only reassign variables).\n"
 );
 
-console.log("Practice Questions on JavaScript Data Types \n");
+// Demonstrate immutability (strings are immutable)
+const s = "abc";
+const changed = s.replace("a", "z"); // returns a new string
+console.log(`Original string: "${s}", After replace(): "${changed}"\n`);
 
-// 1. What will be the output of the following code?
-// let x = "5" + 2 + 3;
-// Hint: Think about how JavaScript handles string concatenation and type coercion.
-let x = "5" + 2 + 3;
-console.log(x); // Output: "523"
+console.log("=== Objects (mutable) ===\n");
 
-// 2. How can you check the type of a variable in JavaScript?
-// Hint: There is a built-in operator for this.
-let y = 42;
-console.log(typeof y); // Output: "number"
+// Object example
+const person = {
+  name: "Ada",
+  age: 36,
+  greet() {
+    return `Hi, I'm ${this.name}`;
+  },
+};
 
-// 3. What is the difference between null and undefined in JavaScript?
-// Hint: One is an assigned value, the other means a variable has been declared but not assigned a value.
-let z = null; // explicitly assigned null
-let w; // declared but not assigned
-console.log(z); // Output: null
+console.log("Person object:", person);
+console.log("typeof person:", typeof person);
+console.log("Method call:", person.greet());
 
-// 4. How do you create a BigInt value?
-// Hint: Try adding 'n' at the end of a number.
-let bigIntValue = 1234567890123456789012345678901234567890n; // BigInt
-console.log(bigIntValue); // Output: 1234567890123456789012345678901234567890n
+// Mutating object
+person.age = 37;
+person.title = "Engineer";
+console.log("After mutation:", person, "\n");
 
-// 5. What will be the output of:
-// console.log(typeof NaN);
-// Hint: NaN stands for "Not a Number", but what does typeof return?
-console.log(typeof NaN); // Output: "number"
+// Arrays and functions are also objects (or callable objects)
+const arr = [1, 2, 3];
+function fn() {
+  return "I'm a function";
+}
 
-// 6. How do you create a Symbol in JavaScript?
-// Hint: Use the Symbol() function.
-let mySymbol = Symbol("description");
-console.log(mySymbol); // Output: Symbol(description)
+console.log("Array:", arr, "typeof:", typeof arr);
+console.log("Function:", fn, "typeof:", typeof fn);
 
-// 7. What is the result of:
-// let obj = {};
-// console.log(typeof obj);
-// Hint: Objects are a non-primitive data type.
-let obj = {};
-console.log(typeof obj); // Output: "object"
-
-// 8. How can you check if a variable is an array?
-// Hint: There is a built-in method in Array.
-let arr = [1, 2, 3];
-console.log(Array.isArray(arr)); // Output: true
-
-// 9. What is the output of:
-// let a;
-// console.log(a === undefined);
-// Hint: What is the default value of an uninitialized variable?
-let a;
-console.log(a === undefined); // Output: true
-
-// 10. How do you convert a string to a number in JavaScript?
-// Hint: Try using Number(), parseInt(), or the unary plus (+) operator.
-let strNumber = "123";
-let convertedNumber = parseInt(strNumber); // or Number(strNumber) or +strNumber
-console.log(convertedNumber); // Output: 123
-
-let convertedNumber1 = Number(strNumber); // or parseInt(strNumber) or +strNumber
-console.log(convertedNumber1); // Output: 123
+// Summary
+console.log(
+  "\nSummary:\n- Primitives: Number, String, Boolean, Undefined, Null, Symbol, BigInt (immutable)\n- Objects: collections, mutable, can contain methods (functions as properties)"
+);
