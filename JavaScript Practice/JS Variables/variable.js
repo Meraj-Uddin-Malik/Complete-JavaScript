@@ -44,7 +44,7 @@ rl.question("Enter First Number: ", (num1) => {
       const largest = Math.max(...numbers);
 
       // let largest   // ! Try This Way (Option 3)
-      //   if (num1 >= num2 && num1 >= num3) { 
+      //   if (num1 >= num2 && num1 >= num3) {
       //     largest = num1;
       //   } else if (num2 >= num1 && num2 >= num3) {
       //     largest = num2;
@@ -53,22 +53,12 @@ rl.question("Enter First Number: ", (num1) => {
       //   }
 
       console.log(`The largest number is: ${largest}`);
-
       rl.close(); // Close the input interface
     });
   });
 });
 
-
-// let x;
-// console.log(typeof x);
-// x = null;
-// console.log(typeof x);
-// x = NaN;
-// console.log(typeof x);
-
-
-// Write a program that takes a number and prints whether it is positive, negative, or zero.
+//* Write a program that takes a number and prints whether it is positive, negative, or zero.
 
 let number = -5; // You can change this value to test different cases
 if (number > 0) {
@@ -78,3 +68,34 @@ if (number > 0) {
 } else {
   console.log(`The number is zero.`);
 }
+
+// wITHOUT USING IF ELSE
+
+let number1 = -5;
+console.log(
+  number1 > 0
+    ? `${number1} is positive.`
+    : number1 < 0
+    ? `${number1} is negative.`
+    : `The number is zero.`
+);
+
+//* What will be the output and why?
+/* var a = 5;
+let b = 10;
+{
+  var a = 20;
+  let b = 30;
+  console.log(a, b);
+}
+console.log(a, b);
+*/
+
+var a = 5;
+let b = 10;
+{
+  var a = 20;
+  let b = 30;
+  console.log(a, b);
+}
+console.log(a, b);
