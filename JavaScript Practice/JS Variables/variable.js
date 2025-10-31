@@ -77,4 +77,4 @@ if (number > 0) {
   console.log(`${number} is negative.`);
 } else {
   console.log(`The number is zero.`);
-}   
+}
