@@ -58,3 +58,23 @@ rl.question("Enter First Number: ", (num1) => {
     });
   });
 });
+
+
+// let x;
+// console.log(typeof x);
+// x = null;
+// console.log(typeof x);
+// x = NaN;
+// console.log(typeof x);
+
+
+// Write a program that takes a number and prints whether it is positive, negative, or zero.
+
+let number = -5; // You can change this value to test different cases
+if (number > 0) {
+  console.log(`${number} is positive.`);
+} else if (number < 0) {
+  console.log(`${number} is negative.`);
+} else {
+  console.log(`The number is zero.`);
+}   
