@@ -54,3 +54,8 @@ if(inputNumber > 0) {
 else if(inputNumber < 0) {
     console.log("Negative Number");
 }
+
+//* Other Way Using Ternary Operator:
+let num = 5;
+let result = num > 0 ? "Positive" : "Negative";
+console.log(result);

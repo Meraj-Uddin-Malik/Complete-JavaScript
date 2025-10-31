@@ -1,8 +1,4 @@
-console.log(`
-    A switch case in programming is a control statement that lets you 
-    execute one block of code out of many options, based on the value 
-    of a variable or expression.
-    It works like an alternative to multiple if-else statements, making code cleaner. \n`);
+// * When you have many possible cases for a single variable, switch is cleaner than multiple if-else.
 
 let days = 8;
 
@@ -37,5 +33,3 @@ console.log(`
     - switch checks the expression against each case.
     - break is used to stop execution after a match (otherwise it will “fall through” to the next case).
     - default runs if none of the cases match.`);
-
-    
