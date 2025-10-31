@@ -37,3 +37,5 @@ console.log(`
     - switch checks the expression against each case.
     - break is used to stop execution after a match (otherwise it will “fall through” to the next case).
     - default runs if none of the cases match.`);
+
+    
