@@ -14,4 +14,43 @@ if (value) {
   console.log("Falsy");
 }
 
+//* Quick Practice (Predict Output)
+//* Q1:
 
+if ("0") {
+  console.log("Yes");
+} else {
+  console.log("No");
+}
+
+//* Q2:
+if (null) {
+  console.log("Run 1");
+} else if (undefined) {
+  console.log("Run 2");
+} else {
+  console.log("Run 3");
+}
+
+//* Q3:
+let a = "";
+let b = " ";
+if (a) console.log("a truthy");
+if (b) console.log("b truthy");
+
+//* Coding Problem
+/*
+Write a program that takes one input number and checks:
+If it’s positive, print: "Positive Number"
+If it’s negative, print: "Negative Number"
+Otherwise, print: "Zero"
+*/
+
+let inputNumber = 85;
+
+if(inputNumber > 0) {
+    console.log("Positive Number");
+}
+else if(inputNumber < 0) {
+    console.log("Negative Number");
+}
