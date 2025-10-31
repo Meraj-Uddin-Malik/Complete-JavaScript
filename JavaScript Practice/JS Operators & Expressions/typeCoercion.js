@@ -25,3 +25,12 @@ if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
 else {
     console.log(year + " is not a leap year")
 }
+
+//* Other Way to Write Leap Year Check.
+console.log(year % 4 === 0 && year % 100 !== 0 || year % 400 === 0 ? "Leap year" : "Not leap year");
+
+
+//* 💡 MAANG tip: They love asking coercion trick questions like:
+console.log([] + []); // ? // ""
+console.log([] + {}); // ? // "[object Object]"
+console.log({} + []); // ? // 0
