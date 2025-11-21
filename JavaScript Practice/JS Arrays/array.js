@@ -114,6 +114,6 @@ console.log(numbers);
 // Map , Reduce , Filter
 let arr = [1,2,3,4,5];
 let a = arr.map((value, index) => {
-    return value, index;
+  return value, index;
 })
 console.log(a)
