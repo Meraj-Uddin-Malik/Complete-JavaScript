@@ -109,3 +109,11 @@ numbers.push(6); // adds 6 at the end
 console.log(numbers);
 numbers.shift(); // removes first element
 console.log(numbers);
+
+
+// Map , Reduce , Filter
+let arr = [1,2,3,4,5];
+let a = arr.map((value, index) => {
+    return value, index;
+})
+console.log(a)
