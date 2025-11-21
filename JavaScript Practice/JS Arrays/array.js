@@ -94,3 +94,18 @@ for (let fruit of fruits) {
   newFruits.push(fruit);
 }
 console.log(newFruits);
+
+
+//* A11
+let numbers = [1, 2, 3, 4, 5];
+let b = numbers.toString();
+console.log(b, typeof b)
+
+let c = numbers.join("-");
+console.log(c, typeof c);
+numbers.pop(); // removes last element
+console.log(numbers)
+numbers.push(6); // adds 6 at the end
+console.log(numbers);
+numbers.shift(); // removes first element
+console.log(numbers);
