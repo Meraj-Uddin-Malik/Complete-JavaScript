@@ -117,3 +117,10 @@ let a = arr.map((value, index) => {
   return value, index;
 })
 console.log(a)
+
+// Filter
+let arr2 = [10,15,20,25,30];
+let b2 = arr2.filter((value) => {
+  return value > 18;
+})
+console.log(b2)
