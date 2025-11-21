@@ -124,3 +124,10 @@ let b2 = arr2.filter((value) => {
   return value > 18;
 })
 console.log(b2)
+
+// Reduce 
+let arr3 = [1,2,3,4,5];
+let c3 = arr3.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+},)
+console.log(c3)
