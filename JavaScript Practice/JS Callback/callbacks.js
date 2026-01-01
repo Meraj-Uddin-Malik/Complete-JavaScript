@@ -1,10 +1,14 @@
-function greet(name, callback) {
-  console.log("Hello " + name);
-  callback();
-}
+// function greet(name, callback) {
+//   console.log("Hello " + name);
+//   callback();
+// }
 
-function sayBye() {
-  console.log("Goodbye!");
-}
+// function sayBye() {
+//   console.log("Goodbye!");
+// }
 
-greet("Meraj", sayBye);
+// greet("Meraj", sayBye);
+
+setTimeout(function () {
+  console.log("This runs after 2 seconds");
+}, 2000);
