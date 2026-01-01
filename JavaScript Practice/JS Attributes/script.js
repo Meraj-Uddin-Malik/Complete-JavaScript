@@ -5,3 +5,6 @@ let second = element.getAttribute("id");
 console.log(second);
 let third = element.getAttribute("style");
 // element.setAttribute("hidden", "true");
+
+element.removeAttribute("id");
+console.log(third);
