@@ -8,3 +8,6 @@ let third = element.getAttribute("style");
 
 element.removeAttribute("id");
 console.log(third);
+
+console.log(element.dataset);
+console.log(element.dataset.game);
