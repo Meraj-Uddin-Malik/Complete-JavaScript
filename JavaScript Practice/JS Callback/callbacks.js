@@ -12,7 +12,6 @@ function callMe() {
 }
 greet("Peter", callMe); // greet function is called with "Peter" and callMe as arguments
 
-
 // Example of using an anonymous function as a callback
 function processUserInput(callback) {
   const name = "Alice"; // Simulating user input
