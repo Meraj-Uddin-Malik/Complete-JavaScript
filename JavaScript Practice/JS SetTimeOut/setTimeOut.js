@@ -1,3 +1,5 @@
+console.log(`SetTimeOut is used to delay code for some time period.`);
+
 console.log("first");
 
 setTimeout(() => {
