@@ -3,15 +3,14 @@ console.log(
 );
 
 function greet(name, callback) {
-  // greet function takes a name and a callback function as parameters
   console.log("Hello " + name); // greeting message is logged
   callback(); // callback function is invoked here
 }
 
 function callMe() {
-  console.log("I am callback function, BYE"); // callback function logs a message
+  console.log("I am callback function, BYE"); 
 }
-greet("Peter", callMe); // greet function is called with "Peter" and callMe as arguments
+greet("Peter", callMe); 
 
 // Example of using an anonymous function as a callback
 function processUserInput(callback) {
@@ -31,10 +30,11 @@ fetchData((data) => {
   console.log("Fetched Data:", data); // Arrow function logs the fetched data
 });
 
+// Example of passing parameters to callback functions
 function document(callback) {
-  const title = "JavaScript Callbacks"; // Simulated document title
-  callback(title); // Invoking the callback with the document title
+  const title = "JavaScript Callbacks";
+  callback(title);
 }
 document(function (title) {
-  console.log("Document Title:", title); // Callback function logs the document title
+  console.log("Document Title:", title);
 });
