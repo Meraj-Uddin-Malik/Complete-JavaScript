@@ -22,3 +22,18 @@ switch (age1) {
     default:
         console.log("Your age is not listed");
 }
+
+// Q3
+
+let num = 18;
+if (num % 2 == 0 && num % 3 == 0) {
+    console.log("The number is divisible by both 2 and 3");
+} else {
+    console.log("The number is not divisible by both 2 and 3");
+}
+
+// Q4
+
+let toDriveAge = 18
+let driveStatus = toDriveAge < 18 ? "You are not eligible to drive" : "You are eligible to drive";
+console.log(driveStatus)
