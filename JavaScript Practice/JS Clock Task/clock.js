@@ -10,7 +10,7 @@ function showTime() {
   if (h > 12) h = h - 12;
 
   if (h < 10) h = "0" + h;
-  if (m < 10) m = "0" + m;
+  if (m < 10) m = "0" + m; // adding leading zero // output 09 instead of 9
   if (s < 10) s = "0" + s;
 
   document.getElementById("clock").innerText =
