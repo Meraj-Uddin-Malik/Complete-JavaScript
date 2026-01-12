@@ -9,9 +9,3 @@ function fetchData(callback) {
     callback("Fetched Data");
   }, 1000);
 }
-function processData(data, callback) {
-  setTimeout(() => {
-    console.log("Data processed");
-    callback("Processed " + data);
-  }, 1000);
-}
