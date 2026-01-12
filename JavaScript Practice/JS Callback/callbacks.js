@@ -12,6 +12,8 @@ function callMe() {
 }
 greet("Peter", callMe); 
 
+
+
 // Example of using an anonymous function as a callback
 function processUserInput(callback) {
   const name = "Alice"; // Simulating user input
@@ -21,6 +23,8 @@ processUserInput(function (name) {
   console.log("Hello " + name); // Anonymous callback function logs a greeting message
 });
 
+
+
 // Example of using arrow function as a callback
 function fetchData(callback) {
   const data = { id: 1, name: "Sample Data" }; // Simulated fetched data
@@ -29,6 +33,8 @@ function fetchData(callback) {
 fetchData((data) => {
   console.log("Fetched Data:", data); // Arrow function logs the fetched data
 });
+
+
 
 // Example of passing parameters to callback functions
 function document(callback) {
