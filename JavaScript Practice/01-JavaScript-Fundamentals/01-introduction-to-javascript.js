@@ -129,4 +129,5 @@ Example:
 git log --oneline -5 : Shows the last 5 commits in a condensed format.
 
 git ls-files | grep "filename" : Searches for a specific file in the repository and displays its path if found.
+touch README.md : Creates a new file named README.md in the current directory.
 */
