@@ -57,3 +57,50 @@ Practice:
 
 console.log("Hello JavaScript");
 console.log("I am Learning JavaScript")
+
+
+/*
+JavaScript Introduction — Questions & Answers
+
+Q1. What would happen if a website had HTML and CSS but no JavaScript?
+
+Answer:
+A website can still display content and styles using HTML and CSS, 
+but many interactive and dynamic features may not work. JavaScript 
+is commonly used for things like button actions, dynamic content updates, 
+form behavior, and fetching data from APIs.
+
+Q2. Does JavaScript only run in web browsers?
+
+Answer:
+No. JavaScript can run inside web browsers and outside browsers. 
+For example, Node.js allows us to run JavaScript outside a web browser, 
+such as on a server or from a terminal.
+
+Remember:
+Browser → JavaScript Engine → JavaScript
+Outside Browser → Node.js → JavaScript
+
+Q3. What is console.log() used for in JavaScript?
+
+Answer:
+console.log() is used to display messages, values, or results in the console. I
+t is commonly used for testing and debugging code.
+
+Example:
+console.log("Hello JavaScript");
+console.log(10 + 20);
+
+Q4. Why is JavaScript called a programming language?
+
+Answer:
+JavaScript is called a programming language because it allows developers to write 
+instructions and logic that a computer can execute to perform tasks and solve problems.
+
+Q5. What is the difference between running JavaScript with a <script> tag and Node.js?
+
+Answer:
+A <script> tag is used to run JavaScript as part of a web page in a browser, while Node.js 
+allows JavaScript to run outside the browser.
+
+*/
