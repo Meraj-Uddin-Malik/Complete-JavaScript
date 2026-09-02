@@ -3,9 +3,8 @@ Topic: Introduction to JavaScript
 
 Definition:
 What is JavaScript?
-Javascript is a programming language that is commonly used to create interactive effects within web browsers. 
-It allows developers to implement complex features on web pages, such as dynamic content updates, multimedia control, 
-and user interface enhancements.
+JavaScript is a high-level programming language used to add logic, interactivity, 
+and dynamic behavior to applications, especially web applications.
 
 Why do we use JavaScript?
 We use JavaScript to enhance the functionality and interactivity of web pages. 
@@ -29,9 +28,8 @@ nd back-end development.
 
 In Roman Urdu:
 What is JavaScript?
-JavaScript ek programming language hai jo web browsers mein interactive effects create karne ke liye commonly use hoti hai. 
-Ye developers ko web pages par complex features implement karne ki ability deti hai, jaise ke dynamic content updates, 
-multimedia control, aur user interface enhancements.
+JavaScript  ek high-level programming language hai jo applications, khaaskar web applications 
+mein logic, interactivity, aur dynamic behavior add karne ke liye use hoti hai.
 
 Why do we use JavaScript?
 Hum JavaScript is liye use karte hain taake web pages ki functionality aur interactivity enhance ho sake. 
@@ -57,4 +55,5 @@ jo isay front-end aur back-end development dono ke liye powerful tool banata hai
 Practice:
 */
 
-console.log("Hello Javascript");
+console.log("Hello JavaScript");
+console.log("I am Learning JavaScript")
