@@ -56,3 +56,5 @@ jo isay front-end aur back-end development dono ke liye powerful tool banata hai
 
 Practice:
 */
+
+console.log("Hello Javascript");
