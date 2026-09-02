@@ -104,3 +104,29 @@ A <script> tag is used to run JavaScript as part of a web page in a browser, whi
 allows JavaScript to run outside the browser.
 
 */
+
+
+/*
+Git — Commands
+
+Git Status : Git status command is used to check the current state of the repository,
+including any changes that have been made, files that are staged for commit, 
+and files that are untracked or modified.
+
+Git Log : Git log command is used to view the commit history of a repository. 
+It shows a list of commits along with their unique identifiers, author
+s, dates, and commit messages. It helps developers track changes and understand the evolution of the codebase.
+
+Git Log Options:
+1. git log --oneline: Displays a condensed version of the commit history, 
+   showing each commit on a single line with its unique identifier and commit message.
+2. git log --graph: Visualizes the commit history as a graph, showing the branching and merging of commits.
+3. git log --author="Author Name": Filters the commit history to show only commits made by a specific author.
+4. git log --since="date": Shows commits made after a specified date.
+5. git log --until="date": Shows commits made before a specified date.
+
+Example:
+git log --oneline -5 : Shows the last 5 commits in a condensed format.
+
+git ls-files | grep "filename" : Searches for a specific file in the repository and displays its path if found.
+*/
