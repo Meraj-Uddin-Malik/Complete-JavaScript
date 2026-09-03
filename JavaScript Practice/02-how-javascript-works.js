@@ -94,5 +94,30 @@ Engine processes/compiles it
         ↓
 Executable instructions
 
+5. What is execution?
+Definition:
+Execution is the process of running the compiled JavaScript code to perform the desired actions.
+
+Urdu Defination: Execution wo process hai jisme compiled JavaScript code ko run kiya jata hai taki desired actions perform ho sake.
+
+For Example:
+
+const x = 10;
+const y = 20;
+
+console.log(x + y);
+
+
+6. What is the Call Stack?
+Definition:
+The call stack is a data structure that keeps track of function calls in a program. 
+It helps manage the execution context and ensures that functions are executed in the correct order.
+
+Urdu Defination: Call Stack ek data structure hai jo program me function calls ko track karta hai. 
+Ye execution context ko manage karne me madad karta hai aur ensure karta hai ke functions sahi 
+order me execute ho.  
+
+
+
 */
 
