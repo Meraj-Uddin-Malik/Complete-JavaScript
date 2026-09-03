@@ -87,12 +87,12 @@ console.log(x + y);
 
 6. What is the Call Stack?
 Definition:
-The call stack is a data structure that keeps track of function calls in a program. 
-It helps manage the execution context and ensures that functions are executed in the correct order.
+The call stack is a data structure used by the JavaScript engine to keep track of currently 
+executing function calls. It follows the Last In, First Out (LIFO) principle.
 
-Urdu Defination: Call Stack ek data structure hai jo program me function calls ko track karta hai. 
-Ye execution context ko manage karne me madad karta hai aur ensure karta hai ke functions sahi 
-order me execute ho.  
+Urdu Defination: Call Stack wo data structure hai jo JavaScript engine use karta hai taki wo 
+currently executing function calls ko track kar sake. Ye Last In, First Out (LIFO) principle 
+follow karta hai. 
 
 My Understanding:
 My understanding of JavaScript is that it is a versatile programming language that allows 
@@ -101,4 +101,25 @@ web page elements, handling user interactions, and communicating with servers. J
 can run in various environments, making it a powerful tool for both front-end and back-end 
 development.
 
+Practice:
 */
+
+function first() {
+    console.log("First Started");
+    second();
+    console.log("First Ended");
+}
+
+function second() {
+    console.log("Second Started");
+    third();
+    console.log("Second Ended");
+}   
+
+function third() {
+    console.log("Third Started");
+    console.log("Third Ended");
+}
+
+first();
+
