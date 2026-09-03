@@ -16,8 +16,7 @@ APIs.
 Where can JavaScript run?
 JavaScript can run in various environments, including web browsers, server-side 
 platforms (like Node.js), and even in non-browser environments such as mobile apps 
-and desktop applications. In web browsers, JavaScript is executed by the browser's 
-JavaScript engine, allowing developers to create interactive web pages. 
+and desktop applications. In web browsers, JavaScript is executed by the browser's.
 
 My Understanding:
 My understanding of JavaScript is that it is a versatile programming language that enables developers to create 
