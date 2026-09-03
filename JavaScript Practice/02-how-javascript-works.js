@@ -3,40 +3,20 @@ Topic: How JavaScript Works
 
 Definition:
 
-What happens when JavaScript code runs?
 
-What is a JavaScript Engine?
-
-What is parsing?
-
-What is compilation?
-
-What is execution?
-
-What is the Call Stack?
-
-My Understanding:
-
-Questions and Answers:
-
-Practice:
-*/
-
-/* Q1. What happens when JavaScript code runs?
+Q1. What happens when JavaScript code runs?
 Answer: When JavaScript code runs, it goes through a process that involves parsing,
 compiling, and executing the code. The JavaScript engine reads the code, converts 
 it into machine-readable instructions, and then executes those instructions to perform 
 the desired actions. 
 
 Lets Suppose:
-*/
 
 const my_name = "Meraj";
 const age = 20;
 
 console.log(my_name);
 
-/*
 Now Computer wont process the code directly, it will first parse the code, then compile it and finally execute it.
 The process goes like this:
 
@@ -51,9 +31,6 @@ Compilation
 Execution
       ↓
 Output
-*/
-
-/*
 
 2. What is a JavaScript Engine?
 Definition:
@@ -117,7 +94,11 @@ Urdu Defination: Call Stack ek data structure hai jo program me function calls k
 Ye execution context ko manage karne me madad karta hai aur ensure karta hai ke functions sahi 
 order me execute ho.  
 
-
+My Understanding:
+My understanding of JavaScript is that it is a versatile programming language that allows 
+developers to create interactive and dynamic web experiences. It enables manipulation of 
+web page elements, handling user interactions, and communicating with servers. JavaScript 
+can run in various environments, making it a powerful tool for both front-end and back-end 
+development.
 
 */
-
