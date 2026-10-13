@@ -49,3 +49,60 @@ else if (marks >= 70){
 else{
     console.log('You failed the exam.');
 }
+
+// In this example, the if-else if statement checks the marks and assigns a grade based on the value of the marks. If none of the conditions are met, it executes the else block and prints 'You failed the exam.' to the console.
+
+// Switch Statement:
+const day = 3;
+
+switch (day){
+    case 1:
+        console.log('Monday');
+        break;
+    case 2:
+        console.log('Tuesday');
+        break;
+    case 3:
+        console.log('Wednesday');
+        break;
+    case 4:
+        console.log('Thursday');
+        break;
+    case 5:
+        console.log('Friday');
+        break;
+    case 6:
+        console.log('Saturday');
+        break;
+    case 7:
+        console.log('Sunday');
+        break;
+    default:
+        console.log('Invalid day.');
+}
+
+// In this example, the switch statement checks the value of the day variable and executes the corresponding case block. If none of the cases match, it executes the default block and prints 'Invalid day.' to the console.
+
+// Another example of using switch statement:
+const fruit = 'apple';
+
+switch (fruit){
+    case 'banana':
+        console.log('Bananas are yellow.');
+        break;
+    case 'apple':
+        console.log('Apples are red or green.');
+        break;
+    case 'orange':
+        console.log('Oranges are orange.');
+        break;
+    default:
+        console.log('Unknown fruit.');
+}
+
+// In this example, the switch statement checks the value of the fruit variable and executes the corresponding case block. If none of the cases match, it executes the default block and prints 'Unknown fruit.' to the console.
+
+// Conclusion:
+// Conditional expressions are a fundamental part of programming that allow you to make decisions based on certain conditions. 
+// They can be implemented using ternary operators, if statements, if-else statements, if-else if statements, and switch statements. 
+// Understanding how to use these conditional expressions effectively will help you write more efficient and readable code.
