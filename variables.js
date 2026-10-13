@@ -1,3 +1,8 @@
+// JavaScript is a popular language used for interactive web development.
+// It manipulates the DOM, handles events, and supports client-side and server-side code.
+// Created by Brendan Eich in 1995, it was first named Mocha, then LiveScript.
+// Renamed JavaScript, it is unrelated to Java and was created in just 10 days.
+
 // Variables are containers that are used for storing data values. In JavaScript, we use the var, let, and const keywords to declare variables.
 var MyName = "Medy"; // var is function-scoped and can be re-declared and updated
 let age = 25; // let is block-scoped and can be updated but not re-declared
