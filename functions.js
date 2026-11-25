@@ -1,142 +1,271 @@
-// Functions In JavaScript
-// Functions are blocks of code designed to perform a particular task. They are executed when "something" invokes or calls them.
+// ============================================================================
+// JAVASCRIPT FUNCTIONS: THE COMPLETE MASTER GUIDE (BEGINNER TO ADVANCED)
+// ============================================================================
+// DEFINITION: A function is a reusable block of code designed to perform a 
+// specific task. It only executes when something calls ("invokes") it.
 
-// Function Declaration
-function myFunction() {
-  console.log("Hello World!");
-}
 
-// Function Expression
-const myFunctionExpression = function() {
-  console.log("Hello from Function Expression!");
-};
+// ============================================================================
+// 1. CORE WAYS TO DEFINE A FUNCTION
+// ============================================================================
 
-// Arrow Function
-const myArrowFunction = () => {
-  console.log("Hello from Arrow Function!");
-};
+// A. Function Declaration (Standard)
+// DEFINITION: Defined with the 'function' keyword followed by a name.
+// KEY BEHAVIOR: "Hoisted" — JavaScript moves it to the top of the file during
+// compilation, meaning you can call it *before* the line where it is written.
+console.log(greet("Ali")); // Output: Hello, Ali!
 
-// Calling the functions
-myFunction();
-myFunctionExpression();
-myArrowFunction();
-
-// Function with Parameters
 function greet(name) {
-  console.log("Hello, " + name + "!");
+  return `Hello, ${name}!`;
 }
 
-greet("Alice");
-greet("Bob");
 
-// Function with Return Value
-function add(a, b) {
-  return a + b;
-}
+// B. Function Expression
+// DEFINITION: A function created inside an expression and stored in a variable.
+// KEY BEHAVIOR: NOT hoisted — you must define it before calling it.
+const subtract = function(a, b) {
+  return a - b;
+};
 
-let sum = add(5, 10);
-console.log("Sum: " + sum);
+console.log(subtract(10, 4)); // Output: 6
 
-// Function with Default Parameters
-function multiply(a, b = 1) {
-  return a * b;
-}
 
-console.log("Multiply: " + multiply(5)); // Uses default value for b
-console.log("Multiply: " + multiply(5, 2)); // Overrides default value for b
+// C. Arrow Function (ES6+)
+// DEFINITION: A shorter, modern syntax using '=>' instead of the 'function' keyword.
+// KEY BEHAVIOR: Not hoisted, and does not create its own 'this' context.
+const sayHello = () => {
+  console.log("Hello from an Arrow Function!");
+};
+sayHello(); // Output: Hello from an Arrow Function!
 
-// Function with Rest Parameters
-function sumAll(...numbers) {
-  return numbers.reduce((acc, curr) => acc + curr, 0);
-}
+// Implicit Return Shortcut: If there is only 1 line of logic, omit {} and 'return'.
+const square = (num) => num * num;
+console.log(square(5)); // Output: 25
 
-console.log("Sum of all: " + sumAll(1, 2, 3, 4, 5));
 
-// Function with Callback
-function processUserInput(callback) {
-  const name = "Charlie";
-  callback(name);
-}
+// D. Anonymous Function
+// DEFINITION: A function without a name. Usually passed directly into another 
+// function when you only need it once.
+setTimeout(function() {
+  console.log("Anonymous Function: Ran after 1 second.");
+}, 1000);
 
-processUserInput(function(name) {
-  console.log("Hello, " + name + "!");
-});
 
-// Function with Closure
-function outerFunction(outerVariable) {
-  return function innerFunction(innerVariable) {
-    console.log("Outer Variable: " + outerVariable);
-    console.log("Inner Variable: " + innerVariable);
-  }
-}
+// E. Named Function Expression
+// DEFINITION: A function expression that includes an internal name.
+// WHY USE IT: Helpful for debugging (the name appears in error logs) and self-recursion.
+const greetUser = function showGreeting() {
+  console.log("Named Function Expression executed.");
+};
+greetUser(); // Output: Named Function Expression executed.
 
-const newFunction = outerFunction("outside");
-newFunction("inside");
 
-// Function with IIFE (Immediately Invoked Function Expression)
+// F. IIFE (Immediately Invoked Function Expression)
+// DEFINITION: A function that executes the exact moment it is defined.
+// WHY USE IT: Creates a private scope so temporary variables don't pollute global code.
 (function() {
-  console.log("This is an IIFE!");
+  const secret = "Hidden inside IIFE";
+  console.log("IIFE:", secret); // Output: IIFE: Hidden inside IIFE
 })();
 
-// Function with Recursion
-function factorial(n) {
-  if (n === 0) {
-    return 1;
-  }
-  return n * factorial(n - 1);
+
+// ============================================================================
+// 2. PARAMETERS, ARGUMENTS, RETURN & SCOPE
+// ============================================================================
+
+// A. Parameters vs. Arguments & Default Parameters
+// DEFINITION: 
+// - Parameters: Placeholder variable names listed when defining the function.
+// - Arguments: The actual values passed in when calling the function.
+// - Default Parameter: A fallback value used if no argument is provided.
+function calculateTotal(price, tax = 0.05) {
+  return price + (price * tax);
 }
 
-console.log("Factorial of 5: " + factorial(5));
+console.log(calculateTotal(100, 0.10)); // Output: 110 (uses passed argument)
+console.log(calculateTotal(100));       // Output: 105 (uses default 0.05 tax)
 
-// Function with Higher-Order Functions
-function higherOrderFunction(callback) {
-  console.log("Before calling the callback function.");
-  callback();
-  console.log("After calling the callback function.");
+
+// B. Rest Parameters (...)
+// DEFINITION: Uses three dots (...) to gather any number of passed arguments 
+// into a single real JavaScript array.
+function sumAll(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
 }
 
-higherOrderFunction(function() {
-  console.log("This is the callback function.");
-});
+console.log(sumAll(10, 20, 30, 40)); // Output: 100
 
-// Function with Anonymous Function
-setTimeout(function() {
-  console.log("This is an anonymous function executed after 2 seconds.");
-}, 2000);
 
-// Function with Named Function Expression
-const namedFunctionExpression = function namedFunc() {
-  console.log("This is a named function expression.");
-};
+// C. The 'return' Statement & Local Scope
+// DEFINITION:
+// - return: Stops the function immediately and outputs a value back to the caller.
+//   (Without 'return', a function outputs 'undefined').
+// - Local Scope: Variables declared inside a function exist ONLY inside it.
+function checkAge(age) {
+  const status = age >= 18 ? "Adult" : "Minor"; // Local variable
+  return status;
 
-namedFunctionExpression();
+  console.log("Unreachable code — never runs after 'return'.");
+}
 
-// Function with Method
-const obj = {
-  myMethod: function() {
-    console.log("This is a method inside an object.");
+console.log(checkAge(20)); // Output: Adult
+// console.log(status);    // ReferenceError: status is not defined
+
+
+// ============================================================================
+// 3. OBJECT & CLASS FUNCTIONS (OOP)
+// ============================================================================
+
+// A. Object Method
+// DEFINITION: A function stored as a property inside an object.
+const user = {
+  username: "Sara",
+  login() { // Shorthand method syntax
+    console.log(`${this.username} has logged in.`);
   }
 };
 
-obj.myMethod();
+user.login(); // Output: Sara has logged in.
 
-// Function with Constructor
+
+// B. Getter and Setter Functions (get / set)
+// DEFINITION: Special object/class functions that disguise themselves as normal 
+// properties when accessed or updated, allowing validation or formatting.
+const product = {
+  price: 100,
+  get formattedPrice() { // Runs when reading product.formattedPrice
+    return `$${this.price.toFixed(2)}`;
+  },
+  set updatePrice(newPrice) { // Runs when setting product.updatePrice = ...
+    if (newPrice > 0) this.price = newPrice;
+  }
+};
+
+console.log(product.formattedPrice); // Output: $100.00
+product.updatePrice = 150;
+console.log(product.formattedPrice); // Output: $150.00
+
+
+// C. Constructor Function
+// DEFINITION: A blueprint function used with the 'new' keyword to create 
+// multiple similar objects. (Capitalized by convention).
 function Person(name, age) {
   this.name = name;
   this.age = age;
 }
 
 const person1 = new Person("David", 30);
-console.log("Person Name: " + person1.name + ", Age: " + person1.age);
+console.log(`Constructor Output: ${person1.name}, ${person1.age}`); // David, 30
 
- // Function with Generator
-function* generatorFunction() {
-  yield 1;
-  yield 2;
-  yield 3;
+
+// ============================================================================
+// 4. FUNCTIONAL PROGRAMMING & ADVANCED LOGIC
+// ============================================================================
+
+// A. Callback Function & Higher-Order Function
+// DEFINITION:
+// - Callback Function: A function passed as an argument into another function.
+// - Higher-Order Function: A function that accepts another function as input 
+//   OR returns a new function.
+function processUserInput(callback) { // Higher-Order Function
+  const name = "Charlie";
+  callback(name);
 }
 
-const generator = generatorFunction();
-console.log(generator.next().value);
-console.log(generator.next().value);
-console.log(generator.next().value);
+processUserInput(function(userName) { // Callback Function
+  console.log(`Callback Output: Hello, ${userName}!`);
+});
+
+
+// B. Closure
+// DEFINITION: A function that remembers and accesses variables from its outer 
+// function's scope, even after the outer function has finished executing.
+function createCounter() {
+  let count = 0; // Private state preserved by closure
+  return function() {
+    count++;
+    return count;
+  };
+}
+
+const counter = createCounter();
+console.log("Closure Count:", counter()); // Output: 1
+console.log("Closure Count:", counter()); // Output: 2
+
+
+// C. Recursion
+// DEFINITION: A function that calls itself repeatedly until it hits a stopping 
+// condition (called the "Base Case").
+function factorial(n) {
+  if (n === 0) return 1; // Base Case (prevents infinite crash)
+  return n * factorial(n - 1);
+}
+
+console.log("Factorial of 5:", factorial(5)); // Output: 120 (5 * 4 * 3 * 2 * 1)
+
+
+// D. Pure Function vs. Impure Function (Conceptual Pattern)
+// DEFINITION:
+// - Pure Function: Always returns the exact same output for the same inputs, 
+//   and modifies nothing outside itself (zero side effects).
+const calculateTax = (amount) => amount * 0.10; // Pure
+console.log("Pure Function:", calculateTax(200)); // Output: 20
+
+// - Impure Function: Relies on or changes external variables outside its scope.
+let externalTotal = 0;
+const addToTotal = (amount) => { externalTotal += amount; }; // Impure
+addToTotal(50);
+
+
+// ============================================================================
+// 5. ASYNCHRONOUS & GENERATOR FUNCTIONS
+// ============================================================================
+
+// A. Async / Await Function
+// DEFINITION: Designed for tasks that take time (API calls, file loading) without 
+// freezing the app. 'async' makes a function return a Promise; 'await' pauses 
+// the function until that Promise finishes.
+async function fetchUserData() {
+  try {
+    const fakeApiCall = new Promise((resolve) => 
+      setTimeout(() => resolve({ name: "Ali", role: "Developer" }), 500)
+    );
+    const data = await fakeApiCall;
+    console.log("Async/Await Result:", data);
+  } catch (error) {
+    console.log("Error:", error);
+  }
+}
+
+fetchUserData(); // Output (after 0.5s): Async/Await Result: { name: 'Ali', role: 'Developer' }
+
+
+// B. Generator Function (function*)
+// DEFINITION: A function that can pause execution mid-way using 'yield' and 
+// resume from that exact spot later using '.next()'.
+function* numberGenerator() {
+  yield 1; // Pauses here on 1st .next()
+  yield 2; // Pauses here on 2nd .next()
+  yield 3; // Pauses here on 3rd .next()
+}
+
+const gen = numberGenerator();
+console.log("Generator 1:", gen.next().value); // Output: 1
+console.log("Generator 2:", gen.next().value); // Output: 2
+console.log("Generator 3:", gen.next().value); // Output: 3
+console.log("Generator Done:", gen.next().done); // Output: true
+
+
+// C. Async Generator Function (async function*)
+// DEFINITION: Combines 'async' and 'function*' to yield asynchronous values 
+// over time (ideal for streaming chunks of data).
+async function* streamNumbers() {
+  yield await Promise.resolve("Chunk 1");
+  yield await Promise.resolve("Chunk 2");
+}
+
+(async () => {
+  for await (const chunk of streamNumbers()) {
+    console.log("Async Generator:", chunk); // Outputs Chunk 1, then Chunk 2
+  }
+})();
