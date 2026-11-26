@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript DOM Practice Playground</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+    .container {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      margin-bottom: 24px;
+    }
+    .card {
+      border: 1px solid #e2e8f0;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    #message-box {
+      padding: 12px;
+      border-radius: 6px;
+      background-color: #e2e8f0;
+      margin: 12px 0;
+    }
+    /* Classes used in Section 4 (classList examples) */
+    .hidden { display: none; }
+    .active { border: 2px solid #2563eb; padding: 12px; border-radius: 8px; }
+    .dark-mode { background-color: #1e293b; color: #f8fafc; }
+
+    /* List & Button Styles */
+    ul { list-style: none; padding: 0; }
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f1f5f9;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+    }
+    .btn {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .btn:hover { background-color: #1d4ed8; }
+    .delete-btn {
+      background-color: #ef4444;
+      color: white;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="email"] {
+      padding: 8px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      width: 250px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1 & 2 Targets: ID, Class, Tag, and Message Box -->
+  <header id="header" class="container">
+    <h1 id="title">JavaScript DOM Playground</h1>
+    <p>Open your browser DevTools Console (F12) to see DOM logs and test selectors.</p>
+
+    <div class="card">
+      <div id="message-box">Original message text inside #message-box</div>
+      <img
+        id="avatar"
+        src="https://via.placeholder.com/80"
+        alt="User Avatar"
+        title="Default Avatar Title"
+        data-user-id="42"
+      />
+    </div>
+
+    <!-- Section 4 Target: classList.add / remove / toggle -->
+    <div id="modal" class="hidden">
+      This modal box was revealed using <code>classList.remove("hidden")</code>!
+    </div>
+  </header>
+
+  <!-- Section 5, 6 & 8 Targets: Dynamic Creation, Traversal & Event Delegation -->
+  <section class="container">
+    <h2>Task List (Event Delegation & Traversal)</h2>
+    <ul id="task-list">
+      <li class="task-item">
+        <span>Learn querySelector &amp; textContent</span>
+        <button class="delete-btn">Delete</button>
+      </li>
+      <li class="task-item">
+        <span>Practice Event Bubbling</span>
+        <button class="delete-btn">Delete</button>
+      </li>
+    </ul>
+    <button id="submit-btn" class="btn">Test Click Event</button>
+  </section>
+
+  <!-- Section 7 Target: Form Submit & preventDefault() -->
+  <section class="container">
+    <h2>Login Form (preventDefault Test)</h2>
+    <form id="login-form">
+      <input type="email" id="email-input" placeholder="Enter email..." required />
+      <button type="submit" class="btn">Submit Form</button>
+    </form>
+  </section>
+
+  <!-- Link your Topic #11 JavaScript file at the bottom so HTML loads first -->
+  <script src="dom.js"></script>
+</body>
+</html>
