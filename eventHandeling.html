@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Event Handling Playground (Topic #13)</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+    .card {
+      background: #ffffff;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      margin-bottom: 20px;
+      border: 1px solid #e2e8f0;
+    }
+    h1 { margin-bottom: 6px; }
+    h2 { margin-top: 0; font-size: 1.15rem; color: #1e40af; }
+    .btn {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 9px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .btn:hover { background-color: #1d4ed8; }
+    input[type="text"], input[type="email"] {
+      padding: 9px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      width: 260px;
+      margin-right: 8px;
+    }
+    /* Section 5: Capturing & Bubbling Box */
+    #parent-box {
+      background-color: #eff6ff;
+      border: 2px dashed #3b82f6;
+      padding: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    /* Section 6: Event Delegation Todo List */
+    #todo-list { list-style: none; padding: 0; margin-top: 12px; }
+    #todo-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f1f5f9;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+    }
+    .delete-btn {
+      background-color: #ef4444;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .hint { font-size: 0.88rem; color: #64748b; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Event Handling Playground</h1>
+  <p class="hint">Open your browser Console (<strong>F12</strong>) to observe event phases, targets, and custom events in real time.</p>
+
+  <!-- 1, 2 & 7A. Click Listeners, Event Object & { once: true } -->
+  <section class="card">
+    <h2>1. Multiple Listeners, Event Object &amp; <code>{ once: true }</code></h2>
+    <button id="action-btn" class="btn">
+      <span>Click Me (Check Console)</span>
+    </button>
+    <p class="hint">Notice the <code>&lt;span&gt;</code> inside the button: clicking the text shows <code>e.target</code> (span) vs. <code>e.currentTarget</code> (button).</p>
+  </section>
+
+  <!-- 3 & 4C. Form Submit (preventDefault) & Live Input Events -->
+  <section class="card">
+    <h2>2. Form Submit (<code>preventDefault</code>) &amp; Live Input</h2>
+    <form id="signup-form">
+      <input type="text" id="search-input" placeholder="Type here for live 'input' events..." />
+      <button type="submit" class="btn">Submit Without Reload</button>
+    </form>
+    <p class="hint">Also try pressing <strong>Escape</strong> or <strong>Ctrl + S</strong> anywhere on this page!</p>
+  </section>
+
+  <!-- 5. Event Propagation: Capturing vs. Bubbling -->
+  <section class="card">
+    <h2>3. Event Propagation (Capturing vs. Bubbling)</h2>
+    <div id="parent-box">
+      <strong>Parent Box (#parent-box)</strong> — Click me or the child button below:<br /><br />
+      <button id="child-btn" class="btn">Child Button (#child-btn)</button>
+    </div>
+    <p class="hint">Clicking Child Button logs: <strong>0. Capturing</strong> &rarr; <strong>1. Target</strong> &rarr; <strong>2. Bubbling</strong>.</p>
+  </section>
+
+  <!-- 6. Event Delegation -->
+  <section class="card">
+    <h2>4. Event Delegation (<code>#todo-list</code>)</h2>
+    <ul id="todo-list">
+      <li>
+        <span>Task 1: Understand Event Bubbling</span>
+        <button class="delete-btn"><span>Delete</span></button>
+      </li>
+      <li>
+        <span>Task 2: Master Event Delegation</span>
+        <button class="delete-btn"><span>Delete</span></button>
+      </li>
+      <li>
+        <span>Task 3: Dispatch Custom Events</span>
+        <button class="delete-btn"><span>Delete</span></button>
+      </li>
+    </ul>
+    <p class="hint">Only ONE listener is attached to <code>#todo-list</code>, yet clicking any Delete button (even its inner <code>&lt;span&gt;</code>) removes that specific row via <code>e.target.closest(".delete-btn")</code>.</p>
+  </section>
+
+  <!-- Link your Topic #13 Event Handling JavaScript file -->
+  <script src="eventHandling.js"></script>
+</body>
+</html>
